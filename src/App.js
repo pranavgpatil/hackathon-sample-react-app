@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
-    document.title = 'My React App';
+    document.title = 'My Vue App';
   }, []);
 
   return (
