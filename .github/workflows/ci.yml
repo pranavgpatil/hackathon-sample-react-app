@@ -55,12 +55,12 @@ jobs:
         run: npm install
 
       - name: Start App
-        run: npm start &
+        run: npm start & sleep 10
         env:
           CI: true
 
       - name: Wait for app to be ready
-        run: npx wait-on http://localhost:3000
+        run: npx wait-on http://localhost:3000 --timeout=60000 --interval=1000
 
       - name: Run Cypress Tests
         run: npm run cypress:run
