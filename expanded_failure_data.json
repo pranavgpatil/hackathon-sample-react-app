@@ -12,107 +12,71 @@
     "label": "infra"
   },
   {
-    "error": "NetworkError: Failed to fetch resource from API endpoint",
-    "label": "infra"
-  },
-  {
-    "error": "AssertionError: Expected value to be true but got false",
+    "error": "ReferenceError: x is not defined",
     "label": "critical"
   },
   {
-    "error": "Error: Element not visible after 10 seconds",
+    "error": "NetworkError: Failed to load resource",
+    "label": "infra"
+  },
+  {
+    "error": "AssertionError: expected true to be false",
+    "label": "critical"
+  },
+  {
+    "error": "Error: element not interactable",
     "label": "flaky"
   },
   {
-    "error": "ReferenceError: myFunction is not defined",
+    "error": "SyntaxError: Unexpected token < in JSON",
     "label": "critical"
   },
   {
-    "error": "Error: Database connection refused",
+    "error": "Error: connect ECONNREFUSED 127.0.0.1:8080",
     "label": "infra"
   },
   {
-    "error": "Error: Unexpected token '<' in JSON at position 0",
-    "label": "critical"
-  },
-  {
-    "error": "Error: Test failed due to browser crash",
-    "label": "infra"
-  },
-  {
-    "error": "Error: Element click intercepted by another element",
+    "error": "Error: test timed out after 5000ms",
     "label": "flaky"
   },
   {
-    "error": "SyntaxError: Unexpected end of input",
-    "label": "critical"
-  },
-  {
-    "error": "Error: Permission denied accessing '/var/log/test.log'",
+    "error": "Error: Cannot find module 'express'",
     "label": "infra"
   },
   {
-    "error": "Error: Test timed out after 5000ms",
+    "error": "UnhandledPromiseRejectionWarning",
+    "label": "critical"
+  },
+  {
+    "error": "Error: element click intercepted",
     "label": "flaky"
   },
   {
-    "error": "Error: Cannot read properties of null (reading 'value')",
+    "error": "Error: Cannot read properties of null",
     "label": "critical"
   },
   {
-    "error": "Error: Disk quota exceeded during test setup",
+    "error": "Error: spawn ENOENT",
     "label": "infra"
   },
   {
-    "error": "Error: Element not found in DOM",
+    "error": "Error: expected 200 \"OK\", got 500 \"Internal Server Error\"",
+    "label": "critical"
+  },
+  {
+    "error": "Error: element not visible",
     "label": "flaky"
   },
   {
-    "error": "Error: Unhandled promise rejection",
+    "error": "Error: Cannot set property 'value' of undefined",
     "label": "critical"
   },
   {
-    "error": "Error: Port 8080 already in use",
+    "error": "Error: EACCES: permission denied",
     "label": "infra"
   },
   {
-    "error": "Error: Test failed due to intermittent network issue",
-    "label": "flaky"
-  },
-  {
-    "error": "Error: Cannot assign to read-only property",
-    "label": "critical"
-  },
-  {
-    "error": "Error: File system read error",
-    "label": "infra"
-  },
-  {
-    "error": "Error: Element detached from DOM before interaction",
-    "label": "flaky"
-  },
-  {
-    "error": "Error: Stack overflow in recursive function",
-    "label": "critical"
-  },
-  {
-    "error": "Error: Insufficient memory to run test",
-    "label": "infra"
-  },
-  {
-    "error": "Error: Element not clickable at point (x, y)",
-    "label": "flaky"
-  },
-  {
-    "error": "Error: Cannot destructure property of undefined",
-    "label": "critical"
-  },
-  {
-    "error": "Error: Test failed due to missing environment variable",
-    "label": "infra"
-  },
-  {
-    "error": "Error: Element stale reference error",
+    "error": "Error: NoSuchElementException",
     "label": "flaky"
   },
   {
@@ -120,87 +84,119 @@
     "label": "critical"
   },
   {
-    "error": "Error: Test failed due to DNS resolution error",
+    "error": "Error: getaddrinfo ENOTFOUND",
     "label": "infra"
   },
   {
-    "error": "Error: Element not interactable",
+    "error": "Error: element is detached from DOM",
     "label": "flaky"
   },
   {
-    "error": "Error: Cannot set property of undefined",
+    "error": "Error: Cannot destructure property of undefined",
     "label": "critical"
   },
   {
-    "error": "Error: Test failed due to missing config file",
+    "error": "Error: ENOTEMPTY: directory not empty",
     "label": "infra"
   },
   {
-    "error": "Error: Element not attached to page",
+    "error": "Error: stale element reference",
     "label": "flaky"
   },
   {
-    "error": "Error: Cannot access property of null",
+    "error": "Error: Cannot read property 'toLowerCase' of undefined",
     "label": "critical"
   },
   {
-    "error": "Error: Test failed due to server timeout",
+    "error": "Error: EMFILE: too many open files",
     "label": "infra"
   },
   {
-    "error": "Error: Element not visible on screen",
+    "error": "Error: element not found",
     "label": "flaky"
   },
   {
-    "error": "Error: Cannot invoke method on undefined",
+    "error": "Error: Cannot read property 'split' of undefined",
     "label": "critical"
   },
   {
-    "error": "Error: Test failed due to missing dependency",
+    "error": "Error: EADDRINUSE: address already in use",
     "label": "infra"
   },
   {
-    "error": "Error: Element not found after page reload",
+    "error": "Error: element is not clickable",
     "label": "flaky"
   },
   {
-    "error": "Error: Cannot read property 'length' of null",
+    "error": "Error: Cannot read property 'forEach' of undefined",
     "label": "critical"
   },
   {
-    "error": "Error: Test failed due to corrupted cache",
+    "error": "Error: ENOSPC: no space left on device",
     "label": "infra"
   },
   {
-    "error": "Error: Element not in viewport",
+    "error": "Error: element is not attached to the page document",
     "label": "flaky"
   },
   {
-    "error": "Error: Cannot call method of undefined object",
+    "error": "Error: Cannot read property 'filter' of undefined",
     "label": "critical"
   },
   {
-    "error": "Error: Test failed due to missing test data",
+    "error": "Error: EPIPE: broken pipe",
     "label": "infra"
   },
   {
-    "error": "Error: Element not loaded in time",
+    "error": "Error: element is not visible",
     "label": "flaky"
   },
   {
-    "error": "Error: Cannot access undefined variable",
+    "error": "Error: Cannot read property 'reduce' of undefined",
     "label": "critical"
   },
   {
-    "error": "Error: Test failed due to broken CI pipeline",
+    "error": "Error: ECONNRESET",
     "label": "infra"
   },
   {
-    "error": "Error: Element not rendered correctly",
+    "error": "Error: element is not interactable",
     "label": "flaky"
   },
   {
-    "error": "Error: Cannot parse JSON string",
+    "error": "Error: Cannot read property 'find' of undefined",
+    "label": "critical"
+  },
+  {
+    "error": "Error: ENOTDIR: not a directory",
+    "label": "infra"
+  },
+  {
+    "error": "Error: element is not enabled",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot read property 'includes' of undefined",
+    "label": "critical"
+  },
+  {
+    "error": "Error: EROFS: read-only file system",
+    "label": "infra"
+  },
+  {
+    "error": "Error: element is not selectable",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot read property 'join' of undefined",
+    "label": "critical"
+  },
+  {
+    "error": "Error: EIO: I/O error",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Process completed with exit code 1.",
     "label": "critical"
   }
 ]
