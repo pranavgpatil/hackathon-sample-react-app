@@ -53,7 +53,7 @@ jobs:
 
       - name: Clean previous build
         run: rm -rf .next dist build
-        
+
       - name: Install dependencies
         run: npm install
 
@@ -78,6 +78,10 @@ jobs:
         if: failure()
         run: |
           node .github/scripts/classifyFailure.js
+        
+      - name: Stop Static Server
+        run: |
+          fuser -k 3000/tcp
   
   release-app-prod:
     runs-on: ubuntu-latest
