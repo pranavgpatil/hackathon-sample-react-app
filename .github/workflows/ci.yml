@@ -53,7 +53,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        
+
       - name: Install Static Server
         run: npm install -g serve
 
@@ -69,13 +69,13 @@ jobs:
         run: npx wait-on http://localhost:3000 --timeout=60000 --interval=1000 --verbose
 
       - name: Run Cypress Tests
-        run: npm run cypress:run > test-output.log 2>&1
+        run: npm run cypress:run
 
       
-      - name: Classify Failure and Take Action
-        if: failure()
-        run: |
-          node .github/scripts/classifyFailure.js
+      # - name: Classify Failure and Take Action
+      #   if: failure()
+      #   run: |
+      #     node .github/scripts/classifyFailure.js
   
   release-app-prod:
     runs-on: ubuntu-latest
