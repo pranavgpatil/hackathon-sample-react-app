@@ -71,11 +71,10 @@ jobs:
       - name: Run Cypress Tests
         run: npm run cypress:run > test-output.log 2>&1
 
-      
-      # - name: Classify Failure and Take Action
-      #   if: failure()
-      #   run: |
-      #     node .github/scripts/classifyFailure.js
+      - name: Classify Failure and Take Action
+        if: failure()
+        run: |
+          node .github/scripts/classifyFailure.js
   
   release-app-prod:
     runs-on: ubuntu-latest

@@ -7,7 +7,7 @@ const result = spawnSync('python3', ['.github/scripts/classify.py', log]);
 const classification = result.stdout.toString().trim();
 console.log('Failure classification:', classification);
 
-if (classification === 'critical' || classification === 'flaky') {
+if (classification === 'critical' || classification === 'flaky' || !classification) {
   console.log('Triggering auto-revert...');
   require('./autoRevert.js');
 } else if (classification === 'infra') {
