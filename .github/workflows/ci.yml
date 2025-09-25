@@ -51,6 +51,9 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Clean previous build
+        run: rm -rf .next dist build
+        
       - name: Install dependencies
         run: npm install
 
