@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders welcome message', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Welcome to React/i);
+  const linkElement = screen.getByText(/This is a sample React application with tests/i);
   expect(linkElement).toBeInTheDocument();
 });
