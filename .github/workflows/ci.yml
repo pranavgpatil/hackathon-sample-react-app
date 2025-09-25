@@ -57,13 +57,14 @@ jobs:
       - name: Start App
         run: npm start & sleep 10
         env:
+          PORT: 3000
           CI: true
 
       - name: Wait for app to be ready
-        run: npx wait-on http://localhost:3000 --timeout=60000 --interval=1000
+        run: npx wait-on http://localhost:3000 --timeout=60000 --interval=1000 --verbose
 
       - name: Run Cypress Tests
-        run: npm run cypress:run
+        run: npm run cypress:run > test-output.log 2>&1
 
       
       - name: Classify Failure and Take Action
