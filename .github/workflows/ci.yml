@@ -51,13 +51,15 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Static Server
+        run: npm install -g serve
 
-      - name: Start App
-        run: npm start & sleep 10
+      - name: Build Application
+        run: npm run build
+
+      - name: Start Static Server
+        run: serve -s build -l 3000 &
         env:
-          PORT: 3000
           CI: true
 
       - name: Wait for app to be ready
