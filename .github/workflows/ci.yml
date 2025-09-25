@@ -1,0 +1,80 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Unit Tests
+        run: npm test
+
+
+  build-app:
+    runs-on: ubuntu-latest
+    needs: unit-test
+    steps:
+      - name: Skipped - Build Application
+        run: echo "Build step is currently skipped."
+
+  release-app-stage:
+    runs-on: ubuntu-latest
+    needs: build-app
+    steps:
+      - name: Skipped - Release to Staging
+        run: echo "Release to staging is currently skipped."
+
+  e2e-test:
+    runs-on: ubuntu-latest
+    needs: unit-test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start App
+        run: npm start &
+        env:
+          CI: true
+
+      - name: Wait for app to be ready
+        run: npx wait-on http://localhost:3000
+
+      - name: Run Cypress Tests
+        run: npm run cypress:run
+
+      
+      - name: Classify Failure and Take Action
+        if: failure()
+        run: |
+          node .github/scripts/classifyFailure.js
+  
+  release-app-prod:
+    runs-on: ubuntu-latest
+    needs: e2e-test
+    steps:
+      - name: Skipped - Release to Production
+        run: echo "Release to production is currently skipped."
+

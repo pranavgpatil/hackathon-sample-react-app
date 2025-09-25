@@ -1,0 +1,206 @@
+[
+  {
+    "error": "TimeoutError: waiting for selector `.submit-button` failed",
+    "label": "flaky"
+  },
+  {
+    "error": "TypeError: Cannot read property 'length' of undefined",
+    "label": "critical"
+  },
+  {
+    "error": "Error: ENOENT: no such file or directory, open '/tmp/config.json'",
+    "label": "infra"
+  },
+  {
+    "error": "NetworkError: Failed to fetch resource from API endpoint",
+    "label": "infra"
+  },
+  {
+    "error": "AssertionError: Expected value to be true but got false",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Element not visible after 10 seconds",
+    "label": "flaky"
+  },
+  {
+    "error": "ReferenceError: myFunction is not defined",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Database connection refused",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Unexpected token '<' in JSON at position 0",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Test failed due to browser crash",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element click intercepted by another element",
+    "label": "flaky"
+  },
+  {
+    "error": "SyntaxError: Unexpected end of input",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Permission denied accessing '/var/log/test.log'",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Test timed out after 5000ms",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot read properties of null (reading 'value')",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Disk quota exceeded during test setup",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element not found in DOM",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Unhandled promise rejection",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Port 8080 already in use",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Test failed due to intermittent network issue",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot assign to read-only property",
+    "label": "critical"
+  },
+  {
+    "error": "Error: File system read error",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element detached from DOM before interaction",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Stack overflow in recursive function",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Insufficient memory to run test",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element not clickable at point (x, y)",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot destructure property of undefined",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Test failed due to missing environment variable",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element stale reference error",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot read property 'map' of undefined",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Test failed due to DNS resolution error",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element not interactable",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot set property of undefined",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Test failed due to missing config file",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element not attached to page",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot access property of null",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Test failed due to server timeout",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element not visible on screen",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot invoke method on undefined",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Test failed due to missing dependency",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element not found after page reload",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot read property 'length' of null",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Test failed due to corrupted cache",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element not in viewport",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot call method of undefined object",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Test failed due to missing test data",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element not loaded in time",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot access undefined variable",
+    "label": "critical"
+  },
+  {
+    "error": "Error: Test failed due to broken CI pipeline",
+    "label": "infra"
+  },
+  {
+    "error": "Error: Element not rendered correctly",
+    "label": "flaky"
+  },
+  {
+    "error": "Error: Cannot parse JSON string",
+    "label": "critical"
+  }
+]
