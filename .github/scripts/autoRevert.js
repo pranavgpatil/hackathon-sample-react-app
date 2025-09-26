@@ -9,7 +9,7 @@ try {
   execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
 
   execSync('git clean -fd');
-  execSync('git reset --hard');
+//   execSync('git reset --hard');
 
   execSync(`git revert ${lastCommit} --no-edit`);
 
