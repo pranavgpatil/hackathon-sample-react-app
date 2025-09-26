@@ -83,12 +83,13 @@ jobs:
         if: always()
         run: cat test-output.log
 
-      # - name: Classify Failure and Take Action
-      #   if: failure()
-      #   run: |
-      #     node .github/scripts/classifyFailure.js
+      - name: Classify Failure and Take Action
+        if: failure()
+        run: |
+          node .github/scripts/classifyFailure.js
         
       - name: Stop Static Server
+        if: always()
         run: |
           fuser -k 3000/tcp
   
