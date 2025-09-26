@@ -14,9 +14,9 @@ const classification = result.stdout.toString().trim();
 console.log('Failure classification:', classification)
 
 
-if (classification === 'critical' || classification === 'flaky') {
+if (classification === 'critical') {
   console.log('Triggering auto-revert...');
   require('./autoRevert.js');
-} else if (classification === 'infra') {
+} else if (classification === 'infra' || classification === 'flaky') {
   console.log('Infra issue detected. Sending Slack notification...');
 }
