@@ -8,6 +8,6 @@ describe('App E2E Tests', () => {
   });
 
   it('should have main heading with correct text', () => {
-    cy.get('h1').should('contain.text', 'Welcome to Vue');
+    cy.get('h1').should('contain.text', 'Welcome to React');
   })
 });
