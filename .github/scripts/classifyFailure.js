@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const log = fs.readFileSync('test-output.log', 'utf8'); // safer for large logs
 
-const result = spawnSync('python3', ['classify.py'], {
+const result = spawnSync('python3', ['.github/scripts/classify.py'], {
   input: log,
   encoding: 'utf-8'
 });
