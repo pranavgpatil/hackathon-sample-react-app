@@ -28,7 +28,7 @@ try {
   }
 
   // Revert the last commit
-  execSync(`git revert ${lastCommit} --no-edit`);
+//   execSync(`git revert ${lastCommit} --no-edit`);
 
   // Apply stash if it existed
   if (hasStash) {
@@ -42,7 +42,7 @@ try {
   }
 
   // Push the revert
-  execSync('git push origin main');
+//   execSync('git push origin main');
 
   console.log('✅ Revert pushed successfully.');
 } catch (error) {
