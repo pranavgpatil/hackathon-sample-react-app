@@ -77,7 +77,7 @@ jobs:
       - name: Extract errors from Cypress log
         if: always()
         run: |
-        grep -iE "fail|error|timed out|expected" full-output.log > test-output.log || echo "No errors found" > test-output.log
+          grep -iE "fail|error|timed out|expected" full-output.log > test-output.log || echo "No errors found" > test-output.log
 
       - name: Show extracted errors
         if: always()
