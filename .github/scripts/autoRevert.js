@@ -1,7 +1,8 @@
 const { execSync } = require('child_process');
 
 try {
-  execSync('git checkout main');
+  execSync('git fetch origin');
+  execSync('git checkout -B main origin/main');
   const lastCommit = execSync('git rev-parse HEAD').toString().trim();
   console.log(`🔁 Reverting commit: ${lastCommit}`);
 
