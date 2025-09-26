@@ -75,7 +75,6 @@ jobs:
         run: npm run cypress:run > test-output.log 2>&1
       
       - name: Show Cypress test output
-        if: always()
         run: cat test-output.log
 
       - name: Classify Failure and Take Action
