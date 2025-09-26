@@ -4,7 +4,7 @@ import joblib
 
 text = sys.argv[0]
 
-model = joblib.load('error_classifier.pkl')
+model = joblib.load('.github/scripts/error_classifier.pkl')
 # model = joblib.load('failure_classifier.pkl')
 # vectorizer = joblib.load('vectorizer.pkl')
 
