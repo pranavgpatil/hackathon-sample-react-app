@@ -1,6 +1,7 @@
 const { execSync } = require('child_process');
 
 try {
+  execSync('git checkout main');
   const lastCommit = execSync('git rev-parse HEAD').toString().trim();
   console.log(`🔁 Reverting commit: ${lastCommit}`);
 
@@ -32,7 +33,7 @@ try {
   }
 
   // Push the revert
-  execSync('git push origin HEAD');
+  execSync('git push origin main');
 
   console.log('✅ Revert pushed successfully.');
 } catch (error) {
