@@ -4,6 +4,14 @@ try {
   execSync('git fetch origin');
   execSync('git checkout -B main origin/main');
   const lastCommit = execSync('git rev-parse HEAD').toString().trim();
+  
+ const diffSummary = execSync(`git show --stat ${lastCommit}`).toString();
+
+  if (diffSummary.includes('create mode') && !diffSummary.includes('delete mode')) {
+    console.warn('⚠️ Last commit appears to be a full restore. Skipping revert to avoid deleting everything.');
+    process.exit(0);
+  }
+
   console.log(`🔁 Reverting commit: ${lastCommit}`);
 
   execSync('git config user.name "github-actions[bot]"');
