@@ -7,7 +7,7 @@ const result = spawnSync('python3', ['classify.py'], {
   input: log,
   encoding: 'utf-8'
 });
-// console.log('STDERR:', result.stderr.toString());
+console.log('STDERR:', result.stderr.toString());
 // console.log('STDOUT:', result.stdout.toString());
 
 const classification = result.stdout.toString().trim();
