@@ -72,15 +72,21 @@ jobs:
         run: npx wait-on http://localhost:3000 --timeout=60000 --interval=1000 --verbose
 
       - name: Run Cypress Tests
-        run: npm run cypress:run > test-output.log 2>&1
-      
-      - name: Show Cypress test output
+        run: npm run cypress:run > full-output.log 2>&1
+
+      - name: Extract errors from Cypress log
+        if: always()
+        run: |
+        grep -iE "fail|error|timed out|expected" full-output.log > test-output.log || echo "No errors found" > test-output.log
+
+      - name: Show extracted errors
+        if: always()
         run: cat test-output.log
 
-      - name: Classify Failure and Take Action
-        if: failure()
-        run: |
-          node .github/scripts/classifyFailure.js
+      # - name: Classify Failure and Take Action
+      #   if: failure()
+      #   run: |
+      #     node .github/scripts/classifyFailure.js
         
       - name: Stop Static Server
         run: |
