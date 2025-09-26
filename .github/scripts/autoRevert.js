@@ -9,10 +9,11 @@ try {
   execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
 
   execSync('git clean -fd');
+  execSync('git stash');
 //   execSync('git reset --hard');
 
   execSync(`git revert ${lastCommit} --no-edit`);
-
+  execSync('git stash pop');
   execSync('git push origin HEAD');
 
   console.log('Revert pushed successfully.');
