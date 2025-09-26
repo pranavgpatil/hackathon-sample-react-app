@@ -1,11 +1,18 @@
 const { spawnSync } = require('child_process');
-const { execSync } = require('child_process');
+const fs = require('fs');
 
-const log = execSync('cat test-output.log').toString(); // Replace with actual log file path
-const result = spawnSync('python3', ['.github/scripts/classify.py', log]);
+const log = fs.readFileSync('test-output.log', 'utf8'); // safer for large logs
+
+const result = spawnSync('python3', ['classify.py'], {
+  input: log,
+  encoding: 'utf-8'
+});
+// console.log('STDERR:', result.stderr.toString());
+// console.log('STDOUT:', result.stdout.toString());
 
 const classification = result.stdout.toString().trim();
-console.log('Failure classification:', classification);
+console.log('Failure classification:', classification)
+
 
 // if (classification === 'critical' || classification === 'flaky' || !classification) {
 //   console.log('Triggering auto-revert...');

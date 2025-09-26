@@ -1,12 +1,14 @@
 import sys
+import os
 import joblib
 
-text = sys.argv[1]
+text = sys.argv[0]
 
-model = joblib.load('failure_classifier.pkl')
-vectorizer = joblib.load('vectorizer.pkl')
+model = joblib.load('error_classifier.pkl')
+# model = joblib.load('failure_classifier.pkl')
+# vectorizer = joblib.load('vectorizer.pkl')
 
-X = vectorizer.transform([text])
-pred = model.predict(X)
+# X = vectorizer.transform([text])
+pred = model.predict([text])
 
 print(pred[0])
