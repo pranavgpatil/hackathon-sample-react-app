@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <h1>Welcome to React</h1>
+      <h1>Welcome to Bar</h1>
       <p>This is a sample React application with tests.</p>
     </div>
   );
