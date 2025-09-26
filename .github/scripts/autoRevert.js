@@ -13,7 +13,7 @@ try {
 //   execSync('git reset --hard');
 
   execSync(`git revert ${lastCommit} --no-edit`);
-  execSync('git stash pop');
+//   execSync('git stash pop');
   execSync('git push origin HEAD');
 
   console.log('Revert pushed successfully.');
